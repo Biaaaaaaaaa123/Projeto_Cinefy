@@ -1,0 +1,45 @@
+:root{
+    --branco-principal : #ffffff;
+    --cinza-secundario : #c0c0c0;
+    --botao-azul     : #167bd7;
+    --cor-fundo      : #00030c;
+
+}
+body{
+    background-color: var(--cor-fundo);
+    color: var(--branco-principal);
+}
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.principal{
+    background-image: url("img/background.jpg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 45% auto;
+    min-height: 100vh;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.container{
+   
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.container__botao{
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em; 
+    color: var(--branco-principal);
+    display: block;
+
+
+
+}
+.botao__secundario{
+    background-color: transparent;
+    border:2px solid var(--branco-principal);
+}
