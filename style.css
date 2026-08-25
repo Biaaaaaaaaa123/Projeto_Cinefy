@@ -3,43 +3,148 @@
     --cinza-secundario : #c0c0c0;
     --botao-azul     : #167bd7;
     --cor-fundo      : #00030c;
-
+    --fonte-principal : 'Inter';
+    --botao-azul-efeito: #3c92fa;
 }
 body{
     background-color: var(--cor-fundo);
     color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
 }
 *{
     padding: 0px;
     margin: 0px;
 }
-
 .principal{
+    position: relative;
     background-image: url("img/background.jpg");
     background-repeat: no-repeat;
     background-position: right center;
-    background-size: 45% auto;
+    background-size: 52% auto; /* imagem maior, sem distorcer */
     min-height: 100vh;
-    border-radius: 25px;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: var(--cor-fundo);
 }
+
 .container{
-   
     height: 100vh;
     display: grid;
     grid-template-columns: 50% 50%;
+    align-items: center; /* centraliza o conteúdo verticalmente */
+    padding: 0 5%;       /* tira o conteúdo das bordas */
+    box-sizing: border-box;
 }
+
+.container__logo{
+    position: absolute;
+    display:block;
+    top: 15%;
+    left: 5%;
+    width: 350px;
+    height: auto;
+}
+
+.principal > div{
+    grid-column: 1;
+}
+
+.container > div{
+    max-width: 600px;
+}
+
 .container__botao{
     background-color: var(--botao-azul);
     border-radius: 5px;
     padding: 1em; 
     color: var(--branco-principal);
     display: block;
-
-
-
+    text-decoration: none;
+    margin-bottom: 10px; /* espaço entre os botões */
+}
+.container__botao:hover{
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-fundo);
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 .botao__secundario{
     background-color: transparent;
-    border:2px solid var(--branco-principal);
+    border: 2px solid var(--branco-principal);
+}
+
+.container__aviso{
+    font-size: 12px;
+    color: var(--cinza-secundario);
+    margin-top: 10px;
+}
+
+.container__titulo{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.secundario__imagem{
+    align-items: center;
+    margin: 0 6em;
+}
+.descricao__titulo{
+    
+    font-weight: 700;
+    font: size 48px;
+    color:var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+.descricao__texto{
+    color:var(--cinza-secundario);
+
+}
+.secundario__botao{
+    display:inline-block;
+    margin-top: 1em;
+
+}
+.secundario__descricao{
+    padding:2em;
+}
+.dispositivos__lista{
+    display: flex;
+    justify-content: center;
+    list-style-type:none;
+}
+.dispositivos{
+    text-align: center;
+    margin-top: 100px;
+}
+.dispositivos__titulo{
+    font-weight: 48px;
+    color: var(--branco-principal);
+}
+.rodape__imagem{
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: auto;
+}
+.rodape{
+    text-align: center;
+    margin-top: 50px;
+}
+.rodape__lista{
+    display: inline-block;
+    list-style-type: none;
+    margin: 8px 4px;
+}
+.lista__link a{
+    color: var(--cinza-secundario);
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    margin-bottom: 4px; /* espaço entre os links */
+}
+.lista__link a:hover{
+    background-color: var(--azul-botao);
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
